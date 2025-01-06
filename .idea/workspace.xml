@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="33f0b581-e03e-4731-a3fc-5f7eba75f007" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/GeometryManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/MapManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/StateManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/UIManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/mapping/LegendManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/mapping/events/EventHandlers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/mapping/events/EventManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/mapping/geometry/GeometryHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/mapping/layers/LayerGroupManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/mapping/layers/TileLayerManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/mapping/markers/MarkerControlManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/markers/CustomMarkerStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/markers/MarkerFactory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/markers/MarkerUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/extracteurdecode.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2qm6mJtjCZByWr0ss4W4zVB2OWN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index2.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index3.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index4.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extracteurdecode.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/alano/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.12.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alano\WebstormProjects\untitled12\python" />
+      <recent name="C:\Users\alano\WebstormProjects\untitled12\js\modules\mapping" />
+      <recent name="C:\Users\alano\WebstormProjects\untitled12\old" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.extracteurdecode">
+    <configuration name="index1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled12/index1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled12/index3.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled12/old/index4.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled12/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled12/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="extracteurdecode" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled12" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/extracteurdecode.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.extracteurdecode" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index1.html" />
+        <item itemvalue="JavaScript Debug.index1.html" />
+        <item itemvalue="JavaScript Debug.index4.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f0b581-e03e-4731-a3fc-5f7eba75f007" name="Changes" comment="" />
+      <created>1735255560290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735255560290</updated>
+      <workItem from="1735255561391" duration="1326000" />
+      <workItem from="1735378433805" duration="42473000" />
+      <workItem from="1735517441227" duration="15010000" />
+      <workItem from="1735637660491" duration="14660000" />
+      <workItem from="1735733023838" duration="21419000" />
+      <workItem from="1735933432729" duration="21870000" />
+      <workItem from="1736104867126" duration="4961000" />
+      <workItem from="1736158141644" duration="1276000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
