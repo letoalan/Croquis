@@ -21,6 +21,7 @@ export class MapManager {
         this.eventManager = null;
         this.legendManager = null;
 
+
         // Instanciation de MarkerControlManager
         this.markerControlManager = new MarkerControlManager(this.map, ['circle', 'square', 'triangle', 'hexagon']);
 
@@ -138,6 +139,12 @@ export class MapManager {
      */
     _initializeMarkerControls() {
         this.markerControlManager.addCustomMarkerControls();
+    }
+    _initializeMarkerFactory() {
+        if (!this.geometryHandler) {
+            throw new Error('GeometryHandler must be initialized before creating MarkerFactory.');
+        }
+        this.markerFactory = new MarkerFactory(this.stateManager, this.geometryHandler);
     }
 
     /**
@@ -279,36 +286,61 @@ export class MapManager {
      * @param {number} size - La nouvelle taille du marqueur.
      */
     resizeMarker(marker, size) {
-        console.log('[MapManager] Resizing marker to size:', size); // Ajouter un log pour vérifier la taille
-        if (marker instanceof L.CircleMarker) {
-            // Redimensionner un cercle
-            marker.setRadius(size);
-        } else if (marker instanceof L.Marker) {
-            // Redimensionner un marqueur SVG (carré, triangle, hexagone)
-            const icon = marker.getIcon();
-            if (icon && icon.options && icon.options.html) {
-                const newIcon = L.divIcon({
-                    html: icon.options.html.replace(/width="[^"]*"/, `width="${size}"`).replace(/height="[^"]*"/, `height="${size}"`),
-                    className: icon.options.className,
-                    iconSize: [size, size],
-                    iconAnchor: [size / 2, size / 2]
+        console.log('[MapManager] Resizing marker to size:', size);
+
+        if (!marker) {
+            console.error('[MapManager] Marker is undefined in resizeMarker.');
+            return;
+        }
+
+        // Vérifier si MarkerFactory est initialisé
+        if (!this.markerFactory) {
+            console.error('[MapManager] MarkerFactory is not initialized.');
+            return;
+        }
+
+        // Vérifier si le marqueur est un marqueur personnalisé
+        if (marker.options.customProperties && marker.options.customProperties.markerType) {
+            console.log('[MapManager] Resizing custom marker');
+            this.markerFactory.resizeCustomMarker(marker, size); // Appeler resizeCustomMarker
+        } else {
+            console.log('[MapManager] Resizing non-custom marker');
+            // Ancienne logique pour redimensionner les autres types de marqueurs
+            if (marker instanceof L.CircleMarker) {
+                // Redimensionner un cercle
+                marker.setRadius(size / 2);
+                console.log('[MapManager] Circle marker resized to:', size);
+            } else if (marker instanceof L.Marker) {
+                // Redimensionner un marqueur SVG (carré, triangle, hexagone)
+                const icon = marker.getIcon();
+                if (icon && icon.options && icon.options.html) {
+                    const newIcon = L.divIcon({
+                        html: icon.options.html.replace(/width="[^"]*"/, `width="${size}"`).replace(/height="[^"]*"/, `height="${size}"`),
+                        className: icon.options.className,
+                        iconSize: [size, size],
+                        iconAnchor: [size / 2, size / 2]
+                    });
+                    marker.setIcon(newIcon);
+                    console.log('[MapManager] SVG marker resized to:', size);
+                }
+            } else if (marker instanceof L.Polygon) {
+                // Redimensionner un marqueur personnalisé (carré, triangle, hexagone)
+                const bounds = marker.getBounds();
+                const center = bounds.getCenter();
+                const scaleFactor = size / (marker.options.markerSize || 24); // Facteur d'échelle
+
+                const newLatLngs = marker.getLatLngs()[0].map(latlng => {
+                    const latDiff = (latlng.lat - center.lat) * scaleFactor;
+                    const lngDiff = (latlng.lng - center.lng) * scaleFactor;
+                    return L.latLng(center.lat + latDiff, center.lng + lngDiff);
                 });
-                marker.setIcon(newIcon);
+
+                marker.setLatLngs([newLatLngs]);
+                marker.options.markerSize = size; // Mettre à jour la taille du marqueur
+                console.log('[MapManager] Polygon marker resized to:', size);
+            } else {
+                console.error('[MapManager] Unknown marker type:', marker);
             }
-        } else if (marker instanceof L.Polygon) {
-            // Redimensionner un marqueur personnalisé (carré, triangle, hexagone)
-            const bounds = marker.getBounds();
-            const center = bounds.getCenter();
-            const scaleFactor = size / (marker.options.markerSize || 24); // Facteur d'échelle
-
-            const newLatLngs = marker.getLatLngs()[0].map(latlng => {
-                const latDiff = (latlng.lat - center.lat) * scaleFactor;
-                const lngDiff = (latlng.lng - center.lng) * scaleFactor;
-                return L.latLng(center.lat + latDiff, center.lng + lngDiff);
-            });
-
-            marker.setLatLngs([newLatLngs]);
-            marker.options.markerSize = size; // Mettre à jour la taille du marqueur
         }
     }
 
