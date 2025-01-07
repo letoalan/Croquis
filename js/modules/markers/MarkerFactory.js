@@ -191,4 +191,35 @@ export class MarkerFactory {
         };
         return dashArrays[lineDash] || '';
     }
+    resizeCustomMarker(marker, newSize) {
+        console.log('[MarkerFactory] Resizing custom marker to size:', newSize);
+        const customProps = marker.options.customProperties;
+        customProps.markerSize = newSize;
+
+        switch (customProps.markerType) {
+            case 'circle':
+                console.log('[MarkerFactory] Resizing circle marker');
+                marker.setRadius(newSize / 2);
+                break;
+            case 'square':
+            case 'triangle':
+            case 'hexagon':
+                console.log('[MarkerFactory] Resizing polygon marker:', customProps.markerType);
+                const latlng = marker.getLatLng();
+                const style = this._getDefaultStyle(customProps);
+                const newMarker = this._createMarkerByType(customProps.markerType, latlng, style);
+                marker.setLatLngs(newMarker.getLatLngs());
+                break;
+            default:
+                console.error('[MarkerFactory] Unknown marker type:', customProps.markerType);
+        }
+
+        marker.setStyle({
+            color: customProps.lineColor,
+            fillColor: customProps.color,
+            fillOpacity: customProps.opacity,
+            weight: customProps.lineWeight,
+            dashArray: this._getDashArray(customProps.lineDash)
+        });
+    }
 }
