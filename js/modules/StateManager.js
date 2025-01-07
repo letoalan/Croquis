@@ -187,7 +187,7 @@ export class StateManager {
         // Mettre à jour la taille du marqueur si elle est définie
         if (markerSize && geometry.type === 'CustomMarker') {
             geometry.markerSize = markerSize; // Mettre à jour la taille du marqueur
-            this.mapManager.resizeMarker(geometry.layer, markerSize); // Redimensionner le marqueur
+            this.mapManager.resizeMarker(geometry.layer, markerSize); // Appeler resizeMarker
         }
 
         // Ne pas mettre à jour la couleur globale pour les polylignes
@@ -271,7 +271,6 @@ export class StateManager {
 
         this.updateUI();
     }
-
     /**
      * Supprime une géométrie de la liste.
      * @param {number} index - L'index de la géométrie à supprimer.
